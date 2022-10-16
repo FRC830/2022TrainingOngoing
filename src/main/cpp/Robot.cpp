@@ -56,9 +56,19 @@ void Robot::AutonomousPeriodic() {
   }
 }
 
-void Robot::TeleopInit() {}
+void Robot::TeleopInit() {
+  frc::SmartDashboard::PutNumber("FlywheelSpeed", 0);
+  frc::SmartDashboard::PutNumber("BackFlywheelSpeed", 0);
+
+
+}
 
 void Robot::TeleopPeriodic() {
+  double FrontFlywheelSpeed = frc::SmartDashboard::GetNumber("FlywheelSpeed", 0);
+  double BackFlywheelSpeed = frc::SmartDashboard::GetNumber("BackFlywheelSpeed", 0);
+
+  
+  
   if (pilot.GetAButton()){
   leftFlywheelTalon.Set(ctre::phoenix::motorcontrol::TalonFXControlMode::PercentOutput, -0.5);
   rightFlywheelTalon.Set(ctre::phoenix::motorcontrol::TalonFXControlMode::PercentOutput, -0.5);

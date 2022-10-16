@@ -13,6 +13,12 @@
 #include <frc/motorcontrol/MotorControllerGroup.h>
 #include <ctre/phoenix/motorcontrol/can/TalonSRX.h>
 #include <ctre/phoenix/motorcontrol/can/TalonFX.h>
+#include <frc/smartdashboard/SmartDashboard.h>
+#include <frc/shuffleboard/Shuffleboard.h>
+#include <frc/shuffleboard/ShuffleboardTab.h>
+
+
+
 
 class Robot : public frc::TimedRobot {
  public:
@@ -39,8 +45,6 @@ class Robot : public frc::TimedRobot {
   ctre::phoenix::motorcontrol::can::TalonFX leftFlywheelTalon {4};
   ctre::phoenix::motorcontrol::can::TalonFX rightFlywheelTalon {9};
   ctre::phoenix::motorcontrol::can::TalonFX backSpinTalon {5};
-
-  
 
 
 
